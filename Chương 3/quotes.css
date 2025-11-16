@@ -1,0 +1,139 @@
+/* quotes.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.page-title {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 2.5em;
+    margin-bottom: 50px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.quotes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.quote-card {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 5px solid #667eea;
+}
+
+.quote-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.quote-icon {
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    font-size: 80px;
+    color: #667eea;
+    opacity: 0.2;
+    font-family: 'Arial', sans-serif;
+    line-height: 1;
+}
+
+.quote-text {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #34495e;
+    font-style: italic;
+    margin: 20px 0 25px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.quote-text::before {
+    content: '"';
+    font-size: 1.5em;
+    color: #667eea;
+    margin-right: 5px;
+}
+
+.quote-text::after {
+    content: '"';
+    font-size: 1.5em;
+    color: #667eea;
+    margin-left: 5px;
+}
+
+.quote-author {
+    border-top: 2px solid #ecf0f1;
+    padding-top: 15px;
+}
+
+.author-name {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #667eea;
+    margin-bottom: 5px;
+    font-style: normal;
+}
+
+.author-title {
+    font-size: 0.9em;
+    color: #7f8c8d;
+    font-style: normal;
+}
+
+.back-link {
+    text-align: center;
+}
+
+.btn-back {
+    display: inline-block;
+    padding: 15px 40px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+.btn-back:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 1.8em;
+    }
+    
+    .quotes-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .quote-text {
+        font-size: 1.1em;
+    }
+}

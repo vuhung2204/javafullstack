@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Tổng hợp thử thách chương 1</title>
+
+    <!-- CSS bên ngoài -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- jQuery + Bootstrap -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+</head>
+
+<body>
+
+<h1 class="title">Tổng hợp thử thách – Chương 1</h1>
+
+
+<!-- ========== THỬ THÁCH 1: HTML + CSS ========== -->
+<section class="section-box">
+    <h2>1. HTML + CSS</h2>
+
+    <div class="form-box">
+        <label>Họ tên:</label>
+        <input type="text"><br><br>
+
+        <label>Giới tính:</label>
+        <input type="radio" name="gender"> Nam
+        <input type="radio" name="gender"> Nữ
+        <br><br>
+
+        <button class="btn btn-primary">Gửi</button>
+    </div>
+</section>
+
+
+<!-- ========== THỬ THÁCH 2: JAVASCRIPT ========== -->
+<section class="section-box">
+    <h2>2. JavaScript</h2>
+
+    <input id="a" type="number" placeholder="Số 1">
+    <input id="b" type="number" placeholder="Số 2">
+    <button onclick="calc()">Tính</button>
+
+    <p>Kết quả: <span id="result"></span></p>
+
+    <script>
+        function calc() {
+            let a = parseFloat(document.getElementById("a").value);
+            let b = parseFloat(document.getElementById("b").value);
+
+            if (!isNaN(a) && !isNaN(b)) {
+                document.getElementById("result").innerText =
+                    "Cộng = " + (a+b) +
+                    ", Trừ = " + (a-b) +
+                    ", Nhân = " + (a*b) +
+                    ", Chia = " + (b === 0 ? "Không chia được" : a/b);
+            }
+        }
+    </script>
+</section>
+
+
+<!-- ========== THỬ THÁCH 3: JQUERY ========== -->
+<section class="section-box">
+    <h2>3. jQuery</h2>
+
+    <p id="text">Mã ví dụ jQuery</p>
+    <button id="changeText" class="btn btn-info">Thay đổi nội dung</button>
+
+    <script>
+        $("#changeText").click(function() {
+            $("#text").text("Ví dụ thay thế nội dung jQuery");
+        });
+    </script>
+</section>
+
+</body>
+</html>

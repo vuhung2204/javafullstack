@@ -1,0 +1,72 @@
+/* c1.css */
+
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 30px 0;
+}
+
+.container {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    padding: 30px;
+    max-width: 900px;
+}
+
+h1 {
+    color: #667eea;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.form-label {
+    font-weight: 600;
+    color: #333;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    padding: 10px 30px;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.table {
+    margin-top: 30px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.table thead {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.table tbody tr:hover {
+    background-color: #f8f9ff;
+}
+
+.alert {
+    display: none;
+}
+
+.btn-action {
+    padding: 5px 15px;
+    font-size: 14px;
+    margin: 0 2px;
+}
+
+.export-buttons {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.export-buttons button {
+    margin: 0 10px;
+}

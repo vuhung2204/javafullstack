@@ -1,0 +1,266 @@
+/* baitap7.css - CSS cho phần chia div */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    color: white;
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Div cha - Phần hình ảnh */
+.parent-div {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+    transition: all 0.4s ease;
+}
+
+.image-section {
+    text-align: center;
+}
+
+.main-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+/* Hiệu ứng khi hover vào hình ảnh - Thay đổi màu của div cha */
+.image-section:hover {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.image-section:hover .section-title,
+.image-section:hover .image-caption {
+    color: white;
+}
+
+.main-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+}
+
+.image-caption {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #555;
+    font-weight: 500;
+    transition: color 0.4s ease;
+}
+
+/* Div con - Phần đặc biệt */
+.child-div {
+    background: white;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    margin: 30px 0;
+    border-left: 6px solid #667eea;
+    transition: all 0.4s ease;
+}
+
+.child-div:hover {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+    border-left-color: #ffffff;
+    transform: translateX(10px);
+}
+
+.highlight-title {
+    color: #667eea;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    transition: color 0.4s ease;
+}
+
+.child-div:hover .highlight-title {
+    color: white;
+}
+
+.description {
+    color: #555;
+    font-size: 1.1em;
+    line-height: 1.8;
+    transition: color 0.4s ease;
+}
+
+.child-div:hover .description {
+    color: white;
+}
+
+/* Demo section */
+.demo-section {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 20px;
+    margin: 40px 0;
+    backdrop-filter: blur(10px);
+}
+
+.demo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.demo-box {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.demo-box h4 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    transition: all 0.4s ease;
+}
+
+.demo-box p {
+    color: #555;
+    transition: all 0.4s ease;
+}
+
+/* Hiệu ứng riêng cho từng box */
+.box-1 {
+    border-top: 4px solid #667eea;
+}
+
+.box-1:hover {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.box-2 {
+    border-top: 4px solid #f093fb;
+}
+
+.box-2:hover {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.box-3 {
+    border-top: 4px solid #43e97b;
+}
+
+.box-3:hover {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+}
+
+.box-4 {
+    border-top: 4px solid #fa709a;
+}
+
+.box-4:hover {
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+}
+
+.demo-box:hover h4,
+.demo-box:hover p {
+    color: white;
+}
+
+.demo-box:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* Explanation section */
+.explanation-section {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    margin: 40px 0;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.explanation-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.explain-box {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 25px;
+    border-radius: 12px;
+    border-left: 5px solid #667eea;
+    transition: all 0.3s ease;
+}
+
+.explain-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.explain-box h4 {
+    color: #667eea;
+    font-size: 1.4em;
+    margin-bottom: 12px;
+}
+
+.explain-box p {
+    color: #555;
+    font-size: 1.05em;
+    line-height: 1.7;
+}
+
+/* Footer */
+.footer {
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    text-align: center;
+    padding: 25px;
+    border-radius: 15px;
+    margin-top: 40px;
+    backdrop-filter: blur(10px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .main-container {
+        padding: 10px;
+    }
+    
+    .section-title {
+        font-size: 2em;
+    }
+    
+    .parent-div,
+    .child-div {
+        padding: 25px;
+    }
+    
+    .demo-grid,
+    .explanation-content {
+        grid-template-columns: 1fr;
+    }
+}

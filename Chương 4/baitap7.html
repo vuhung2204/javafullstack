@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài Tập 7 - Phần Chia Div</title>
+    <link rel="stylesheet" href="baitap7.css">
+</head>
+<body>
+    <div class="main-container">
+        <!-- Div cha chứa hình ảnh -->
+        <div class="parent-div image-section">
+            <h2 class="section-title">📸 Phần Hình Ảnh</h2>
+            <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=600&h=400&fit=crop" 
+                 alt="Dải ngân hà" 
+                 class="main-image">
+            <p class="image-caption">Đọc biệt của tôi Phần chia BẰNG nội tuyến chữ TRONG div giống</p>
+        </div>
+
+        <!-- Div con bên trong - Phần Chia Đặc Biệt -->
+        <div class="child-div highlight-section">
+            <h3 class="highlight-title">Của tôi Phần khu đặc biệt</h3>
+            <div class="content-wrapper">
+                <p class="description">
+                    Thay đổi cải chữ màu sắc của div yêu tố khi người dùng di chuyển chuột qua cải hình ảnh VÀ thay đổi Nỗ trở lại khu người dùng di chuyển ra khỏi hình ảnh.
+                </p>
+            </div>
+        </div>
+
+        <!-- Phần Demo các Div khác nhau -->
+        <div class="demo-section">
+            <h2 class="section-title">🎨 Demo Các Phần Div</h2>
+            
+            <div class="demo-grid">
+                <div class="demo-box box-1">
+                    <h4>Div Số 1</h4>
+                    <p>Di chuột vào để thấy hiệu ứng</p>
+                </div>
+                
+                <div class="demo-box box-2">
+                    <h4>Div Số 2</h4>
+                    <p>Màu sắc thay đổi khi hover</p>
+                </div>
+                
+                <div class="demo-box box-3">
+                    <h4>Div Số 3</h4>
+                    <p>Văn bản cũng đổi màu</p>
+                </div>
+                
+                <div class="demo-box box-4">
+                    <h4>Div Số 4</h4>
+                    <p>Hiệu ứng chuyển động mượt</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Phần giải thích -->
+        <div class="explanation-section">
+            <h2 class="section-title">💡 Giải Thích</h2>
+            <div class="explanation-content">
+                <div class="explain-box">
+                    <h4>Div Cha (Parent Div)</h4>
+                    <p>Div chứa hình ảnh và có thể chứa các div con bên trong. Nó là container tổng thể.</p>
+                </div>
+                
+                <div class="explain-box">
+                    <h4>Div Con (Child Div)</h4>
+                    <p>Div nằm bên trong div cha, có thể có style và thuộc tính riêng độc lập.</p>
+                </div>
+                
+                <div class="explain-box">
+                    <h4>Hiệu Ứng Hover</h4>
+                    <p>Khi di chuột qua (:hover), màu sắc và các thuộc tính CSS thay đổi. Khi rời chuột, trở về trạng thái ban đầu.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>© 2025 - Demo Phần Chia Div và Hiệu Ứng Hover</p>
+    </footer>
+</body>
+</html>

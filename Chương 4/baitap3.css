@@ -1,0 +1,157 @@
+/* baitap3.css - CSS cho trang gallery */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: #00ff88;
+    font-size: 3em;
+    margin-bottom: 15px;
+    text-shadow: 0 0 30px rgba(0, 255, 136, 0.5);
+}
+
+.intro {
+    text-align: center;
+    color: #cccccc;
+    font-size: 1.3em;
+    margin-bottom: 50px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    background-color: #1a1a1a;
+}
+
+.gallery-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 255, 136, 0.3);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.caption {
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7));
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .caption {
+    transform: translateY(0);
+}
+
+.caption h3 {
+    color: #00ff88;
+    font-size: 1.4em;
+    margin-bottom: 8px;
+}
+
+.caption p {
+    color: #cccccc;
+    font-size: 1em;
+}
+
+.info-box {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 40px;
+    border-radius: 20px;
+    margin-top: 50px;
+    box-shadow: 0 10px 40px rgba(102, 126, 234, 0.3);
+}
+
+.info-box h2 {
+    color: #ffffff;
+    font-size: 2em;
+    margin-bottom: 20px;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 15px;
+}
+
+.info-box p {
+    color: #ffffff;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.info-box ul {
+    margin-left: 30px;
+    margin-top: 15px;
+}
+
+.info-box ul li {
+    color: #ffffff;
+    font-size: 1.1em;
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 10px;
+}
+
+.info-box ul li::before {
+    content: "✓";
+    color: #00ff88;
+    font-weight: bold;
+    position: absolute;
+    left: -20px;
+    font-size: 1.2em;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+    
+    .gallery {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .gallery-item img {
+        height: 250px;
+    }
+    
+    .info-box {
+        padding: 25px;
+    }
+}

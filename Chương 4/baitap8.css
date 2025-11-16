@@ -1,0 +1,304 @@
+/* baitap8.css - CSS cho dropdown menu */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.main-title {
+    color: white;
+    font-size: 3em;
+    text-align: center;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.subtitle {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.3em;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.dropdown-section {
+    background: white;
+    padding: 40px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-section h2 {
+    color: #2c3e50;
+    font-size: 2em;
+    margin-bottom: 25px;
+    border-bottom: 3px solid #667eea;
+    padding-bottom: 10px;
+}
+
+/* Dropdown cơ bản */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+}
+
+.dropdown-btn {
+    padding: 12px 30px;
+    font-size: 1.1em;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.dropdown-btn:hover {
+    background: #764ba2;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    min-width: 200px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    margin-top: 5px;
+    z-index: 1000;
+    overflow: hidden;
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 12px 20px;
+    color: #2c3e50;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.dropdown-content a:last-child {
+    border-bottom: none;
+}
+
+.dropdown-content a:hover {
+    background: #667eea;
+    color: white;
+    padding-left: 30px;
+}
+
+/* Dropdown với Icon */
+.btn-fancy {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    font-weight: 600;
+}
+
+.fancy-content a {
+    font-size: 1.05em;
+}
+
+/* Dropdown màu sắc */
+.color-dropdown-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn-red {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.btn-blue {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.btn-purple {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Kích thước khác nhau */
+.size-demo {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.btn-small {
+    padding: 8px 20px;
+    font-size: 0.9em;
+}
+
+.btn-medium {
+    padding: 12px 30px;
+    font-size: 1.1em;
+}
+
+.btn-large {
+    padding: 16px 40px;
+    font-size: 1.3em;
+}
+
+/* Phong cách đa dạng */
+.style-grid {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.btn-gradient {
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+    font-weight: bold;
+}
+
+.btn-rounded {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+    border-radius: 50px;
+}
+
+.btn-shadow {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
+}
+
+.gradient-content {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.rounded-content {
+    border-radius: 15px;
+}
+
+.rounded-content a {
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.shadow-content {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Info section */
+.info-section {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    margin-top: 30px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.info-section h2 {
+    color: #2c3e50;
+    font-size: 2.2em;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.info-card {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 30px;
+    border-radius: 12px;
+    border-left: 5px solid #667eea;
+    transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.info-card h3 {
+    color: #667eea;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.info-card p {
+    color: #555;
+    font-size: 1.05em;
+    line-height: 1.7;
+}
+
+/* Footer */
+.footer {
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    text-align: center;
+    padding: 25px;
+    border-radius: 15px;
+    margin-top: 40px;
+    backdrop-filter: blur(10px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 2em;
+    }
+    
+    .dropdown-section {
+        padding: 25px;
+    }
+    
+    .color-dropdown-grid,
+    .size-demo,
+    .style-grid {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .dropdown {
+        width: 100%;
+        display: block;
+    }
+    
+    .dropdown-btn {
+        width: 100%;
+    }
+    
+    .dropdown-content {
+        width: 100%;
+    }
+}

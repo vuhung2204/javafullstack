@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài Tập 5 - Cái Bên Trên và Di Chuột</title>
+    <link rel="stylesheet" href="baitap5.css">
+</head>
+<body>
+    <div class="header-fixed">
+        <div class="header-content">
+            <h1>📌 Đây Là Thanh Cố Định Trên Đầu</h1>
+            <p>Thanh này sẽ luôn hiển thị ở trên cùng khi bạn cuộn trang xuống</p>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="container">
+            <section class="intro-section">
+                <h2>🎯 Chào Mừng Đến Với Trang Demo</h2>
+                <p class="subtitle">Trang này minh họa hai tính năng quan trọng trong CSS</p>
+            </section>
+
+            <section class="feature-section">
+                <h3>📍 Tính Năng 1: Cái Bên Trên (Fixed Position)</h3>
+                <div class="feature-box">
+                    <p><strong>Position: fixed</strong> là thuộc tính CSS giúp phần tử luôn cố định ở một vị trí nhất định trên màn hình, không bị ảnh hưởng bởi việc cuộn trang.</p>
+                    <ul>
+                        <li>Phần tử sẽ "nổi" trên các nội dung khác</li>
+                        <li>Vị trí được xác định bởi top, right, bottom, left</li>
+                        <li>Thường dùng cho menu, header, nút back to top</li>
+                        <li>Cần đặt z-index để điều khiển thứ tự hiển thị</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="feature-section">
+                <h3>🖱️ Tính Năng 2: Di Chuyển Con Trỏ (Hover Effects)</h3>
+                <p>Di chuyển chuột qua các ô dưới đây để xem hiệu ứng:</p>
+                
+                <div class="hover-demo-grid">
+                    <div class="hover-box box1">
+                        <h4>Hiệu Ứng Scale</h4>
+                        <p>Phóng to khi di chuột</p>
+                    </div>
+                    
+                    <div class="hover-box box2">
+                        <h4>Hiệu Ứng Rotate</h4>
+                        <p>Xoay nhẹ khi di chuột</p>
+                    </div>
+                    
+                    <div class="hover-box box3">
+                        <h4>Hiệu Ứng Đổi Màu</h4>
+                        <p>Thay đổi màu nền</p>
+                    </div>
+                    
+                    <div class="hover-box box4">
+                        <h4>Hiệu Ứng Shadow</h4>
+                        <p>Bóng đổ đậm hơn</p>
+                    </div>
+                    
+                    <div class="hover-box box5">
+                        <h4>Hiệu Ứng Slide</h4>
+                        <p>Trượt lên phía trên</p>
+                    </div>
+                    
+                    <div class="hover-box box6">
+                        <h4>Hiệu Ứng Glow</h4>
+                        <p>Phát sáng xung quanh</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="code-section">
+                <h3>💻 Code CSS Mẫu</h3>
+                <div class="code-box">
+                    <pre><code>/* Cố định phần tử trên đầu */
+.header-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+/* Hiệu ứng khi di chuột */
+.hover-box:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}</code></pre>
+                </div>
+            </section>
+
+            <section class="tips-section">
+                <h3>💡 Mẹo Hữu Ích</h3>
+                <div class="tips-grid">
+                    <div class="tip-card">
+                        <span class="tip-icon">🎨</span>
+                        <h4>Sử Dụng Transition</h4>
+                        <p>Thêm transition để hiệu ứng hover mượt mà hơn</p>
+                    </div>
+                    <div class="tip-card">
+                        <span class="tip-icon">⚡</span>
+                        <h4>Transform vs Margin</h4>
+                        <p>Transform hiệu quả hơn margin/padding cho animation</p>
+                    </div>
+                    <div class="tip-card">
+                        <span class="tip-icon">📱</span>
+                        <h4>Mobile Friendly</h4>
+                        <p>Hover không hoạt động tốt trên mobile, cần xem xét</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="scroll-demo">
+                <p>⬇️ Cuộn xuống để thấy thanh header vẫn cố định ở trên ⬇️</p>
+                <div class="spacer"></div>
+                <p>⬆️ Cuộn lên để xem lại các hiệu ứng ⬆️</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>© 2025 - Demo Position Fixed và Hover Effects</p>
+    </footer>
+</body>
+</html>

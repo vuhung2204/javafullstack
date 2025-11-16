@@ -1,0 +1,106 @@
+/* splash.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.splash-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.splash-content {
+    animation: fadeIn 1.5s ease-in;
+}
+
+.splash-title {
+    color: white;
+    font-size: 3em;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    animation: slideDown 1s ease-out;
+}
+
+.splash-link {
+    display: inline-block;
+    text-decoration: none;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.splash-link:hover {
+    transform: scale(1.05);
+}
+
+.splash-image {
+    width: 600px;
+    max-width: 90vw;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+    border: 5px solid white;
+}
+
+.enter-text {
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: white;
+    font-weight: bold;
+    padding: 15px 40px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 50px;
+    backdrop-filter: blur(10px);
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.splash-link:hover .enter-text {
+    background: rgba(255,255,255,0.3);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .splash-title {
+        font-size: 2em;
+    }
+    
+    .splash-image {
+        width: 100%;
+    }
+    
+    .enter-text {
+        font-size: 1.2em;
+    }
+}

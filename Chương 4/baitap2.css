@@ -1,0 +1,176 @@
+/* baitap2.css - CSS cho trang div */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #1a1a1a;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 50px rgba(255, 255, 255, 0.1);
+}
+
+.header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 40px;
+    text-align: center;
+}
+
+.title {
+    font-size: 1.2em;
+    color: #e0e0e0;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.location {
+    font-size: 1.1em;
+    color: #e0e0e0;
+    margin-bottom: 5px;
+    margin-top: 15px;
+}
+
+.address {
+    font-size: 1.3em;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.education {
+    font-size: 1.1em;
+    color: #e0e0e0;
+    margin-bottom: 5px;
+    margin-top: 15px;
+}
+
+.degree {
+    font-size: 1.3em;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.main-content {
+    padding: 40px;
+}
+
+.main-content h2 {
+    color: #00ff88;
+    font-size: 2em;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #00ff88;
+    padding-bottom: 10px;
+}
+
+.main-content h3 {
+    color: #66ccff;
+    font-size: 1.5em;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.main-content p {
+    color: #cccccc;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.info-section {
+    background-color: #252525;
+    padding: 25px;
+    border-radius: 10px;
+    margin: 25px 0;
+    border-left: 5px solid #66ccff;
+}
+
+.skills-section {
+    background-color: #252525;
+    padding: 25px;
+    border-radius: 10px;
+    margin: 25px 0;
+    border-left: 5px solid #00ff88;
+}
+
+.skill-item {
+    color: #e0e0e0;
+    font-size: 1.1em;
+    padding: 12px 20px;
+    margin: 10px 0;
+    background-color: #2a2a2a;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.skill-item:hover {
+    background-color: #333333;
+    transform: translateX(10px);
+}
+
+.note-box {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    padding: 25px;
+    border-radius: 15px;
+    margin-top: 30px;
+    box-shadow: 0 5px 20px rgba(245, 87, 108, 0.3);
+}
+
+.note-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.note-content {
+    color: #ffffff;
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+.footer {
+    background-color: #0a0a0a;
+    padding: 25px;
+    text-align: center;
+    border-top: 2px solid #333333;
+}
+
+.footer-text {
+    color: #888888;
+    font-size: 1em;
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        margin: 10px;
+    }
+    
+    .header {
+        padding: 25px;
+    }
+    
+    .subtitle {
+        font-size: 2em;
+    }
+    
+    .main-content {
+        padding: 25px;
+    }
+}
