@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website 5 Trang - Bài Tập</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <button class="nav-btn active" onclick="showPage('page1')">Bảng Dữ Liệu</button>
+            <button class="nav-btn" onclick="showPage('page2')">Đăng Ký</button>
+            <button class="nav-btn" onclick="showPage('page3')">Tải File</button>
+            <button class="nav-btn" onclick="showPage('page4')">Thời Tiết</button>
+            <button class="nav-btn" onclick="showPage('page5')">Cổ Phiếu</button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Page 1: Table -->
+        <div id="page1" class="page active">
+            <h1>Bảng Dữ Liệu Responsive</h1>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Họ Tên</th>
+                            <th>Email</th>
+                            <th>Số Điện Thoại</th>
+                            <th>Địa Chỉ</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Nguyễn Văn A</td>
+                            <td>vana@email.com</td>
+                            <td>0901234567</td>
+                            <td>Hà Nội</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Trần Thị B</td>
+                            <td>thib@email.com</td>
+                            <td>0912345678</td>
+                            <td>Hồ Chí Minh</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Lê Văn C</td>
+                            <td>vanc@email.com</td>
+                            <td>0923456789</td>
+                            <td>Đà Nẵng</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Phạm Thị D</td>
+                            <td>thid@email.com</td>
+                            <td>0934567890</td>
+                            <td>Hải Phòng</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Hoàng Văn E</td>
+                            <td>vane@email.com</td>
+                            <td>0945678901</td>
+                            <td>Cần Thơ</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Page 2: Registration Form -->
+        <div id="page2" class="page">
+            <h1>Đăng Ký Tài Khoản</h1>
+            <div class="form-container">
+                <div class="form-group">
+                    <label>Họ và Tên *</label>
+                    <input type="text" id="name" placeholder="Nhập họ và tên">
+                </div>
+                <div class="form-group">
+                    <label>Email *</label>
+                    <input type="email" id="email" placeholder="example@email.com">
+                </div>
+                <div class="form-group">
+                    <label>Số Điện Thoại *</label>
+                    <input type="tel" id="phone" placeholder="0901234567">
+                </div>
+                <div class="form-group">
+                    <label>Địa Chỉ *</label>
+                    <textarea id="address" rows="3" placeholder="Nhập địa chỉ đầy đủ"></textarea>
+                </div>
+                <button class="btn" onclick="submitForm()">Đăng Ký</button>
+            </div>
+        </div>
+
+        <!-- Page 3: File Upload -->
+        <div id="page3" class="page">
+            <h1>Tải Lên Tệp Tin</h1>
+            <div class="upload-area" onclick="document.getElementById('fileInput').click()">
+                <div class="upload-icon">📤</div>
+                <h3>Chọn tệp tin</h3>
+                <p>hoặc kéo thả tệp vào đây</p>
+                <input type="file" id="fileInput" style="display: none;" onchange="handleFileSelect(event)">
+            </div>
+            <div id="progressContainer" class="progress-container" style="display: none;">
+                <p id="fileName"></p>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <p id="progressText" style="margin-top: 10px;">0%</p>
+                <button class="btn" id="uploadBtn" onclick="startUpload()" style="margin-top: 20px;">Tải Lên</button>
+            </div>
+        </div>
+
+        <!-- Page 4: Weather Charts -->
+        <div id="page4" class="page">
+            <h1>Thời Tiết 7 Ngày</h1>
+            
+            <div class="chart-container">
+                <h2 class="chart-title">Biểu Đồ Cột - Nhiệt Độ (°C)</h2>
+                <div class="bar-chart" id="barChart"></div>
+            </div>
+
+            <div class="chart-container">
+                <h2 class="chart-title">Biểu Đồ Tròn - Xác Suất Mưa (%)</h2>
+                <div class="pie-charts" id="pieCharts"></div>
+            </div>
+        </div>
+
+        <!-- Page 5: Stock Grid -->
+        <div id="page5" class="page">
+            <h1>Giá Cổ Phiếu Apple & Các Công Ty</h1>
+            <div class="stock-grid" id="stockGrid"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,370 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+.nav {
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 15px 0;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+}
+
+.nav-btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s;
+    white-space: nowrap;
+    background: #f3f4f6;
+    color: #374151;
+}
+
+.nav-btn:hover {
+    background: #e5e7eb;
+}
+
+.nav-btn.active {
+    background: #3b82f6;
+    color: white;
+    box-shadow: 0 4px 6px rgba(59, 130, 246, 0.3);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+}
+
+h1 {
+    color: white;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+}
+
+/* ========== Page 1: Table ========== */
+.table-container {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background: #3b82f6;
+    color: white;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+
+tbody tr:nth-child(even) {
+    background: #f9fafb;
+}
+
+tbody tr:hover {
+    background: #e5e7eb;
+}
+
+/* ========== Page 2: Form ========== */
+.form-container {
+    background: white;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #374151;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border 0.3s;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+}
+
+.btn {
+    width: 100%;
+    padding: 15px;
+    background: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #2563eb;
+}
+
+/* ========== Page 3: Upload ========== */
+.upload-area {
+    border: 3px dashed #cbd5e1;
+    border-radius: 12px;
+    padding: 60px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    background: white;
+}
+
+.upload-area:hover {
+    border-color: #3b82f6;
+    background: #f0f9ff;
+}
+
+.upload-icon {
+    font-size: 60px;
+    color: #94a3b8;
+    margin-bottom: 20px;
+}
+
+.progress-container {
+    margin-top: 30px;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background: #e5e7eb;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #3b82f6, #2563eb);
+    transition: width 0.3s;
+    width: 0%;
+}
+
+/* ========== Page 4: Charts ========== */
+.chart-container {
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    margin-bottom: 30px;
+}
+
+.chart-title {
+    color: #374151;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.bar-chart {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    height: 300px;
+    border-left: 2px solid #374151;
+    border-bottom: 2px solid #374151;
+    padding: 20px 10px 10px 10px;
+}
+
+.bar {
+    flex: 1;
+    max-width: 80px;
+    background: linear-gradient(to top, #f97316, #ef4444);
+    border-radius: 8px 8px 0 0;
+    position: relative;
+    margin: 0 10px;
+    transition: opacity 0.3s;
+}
+
+.bar:hover {
+    opacity: 0.8;
+}
+
+.bar-value {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: bold;
+    color: #374151;
+}
+
+.bar-label {
+    text-align: center;
+    margin-top: 10px;
+    font-weight: 600;
+    color: #6b7280;
+}
+
+.pie-charts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.pie-chart {
+    text-align: center;
+}
+
+.circle {
+    position: relative;
+    width: 120px;
+    height: 120px;
+}
+
+.circle svg {
+    transform: rotate(-90deg);
+}
+
+.circle-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* ========== Page 5: Stock Grid ========== */
+.stock-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.stock-card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-left: 5px solid;
+    transition: all 0.3s;
+}
+
+.stock-card:hover {
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    transform: translateY(-5px);
+}
+
+.stock-card.positive {
+    border-left-color: #10b981;
+}
+
+.stock-card.negative {
+    border-left-color: #ef4444;
+}
+
+.stock-symbol {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #374151;
+}
+
+.stock-name {
+    font-size: 0.9em;
+    color: #6b7280;
+    margin-bottom: 15px;
+}
+
+.stock-price {
+    font-size: 2em;
+    font-weight: bold;
+    color: #111827;
+    margin-bottom: 10px;
+}
+
+.stock-change {
+    font-weight: 600;
+}
+
+.stock-change.positive {
+    color: #10b981;
+}
+
+.stock-change.negative {
+    color: #ef4444;
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .form-container {
+        padding: 25px;
+    }
+
+    .upload-area {
+        padding: 40px 20px;
+    }
+
+    .bar-chart {
+        height: 200px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 10px 5px;
+    }
+}
