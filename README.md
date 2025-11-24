@@ -47,3 +47,24 @@ Effects: hide/show, fade, slide, toggle.
 
 DOM manipulation, chaining, callback.
 → Thêm tương tác động vào webpage bằng JS dễ dàng hơn.
+
+Chương 6 – Bootstrap
+
+Bootstrap là framework front-end giúp tạo giao diện web nhanh, đẹp và responsive.
+
+Cài đặt bằng CDN hoặc tải file về → dùng thẻ <meta viewport> để hỗ trợ hiển thị trên mobile.
+
+Hai loại container chính: .container (rộng cố định) và .container-fluid (full màn hình).
+
+Hệ thống Grid 12 cột giúp chia bố cục linh hoạt theo kích thước màn hình (col, col-sm, col-md…).
+
+Typography: hỗ trợ font mặc định, các tiêu đề display-1 → display-4, thẻ <small>, <mark>, .blockquote…
+
+Màu sắc: dùng lớp text-color và bg-color (primary, success, danger, warning…).
+
+Hình ảnh: hỗ trợ rounded, rounded-circle, img-thumbnail.
+
+Nút bấm: nhiều kiểu nút (primary, success…), nút outline, kích thước (btn-lg, btn-sm), và button group.
+
+Component: progress bar (màu, stripe, animated), pagination, dropdown…
+→ Bootstrap giúp xây dựng UI hiện đại và phản hồi tốt mà không phải viết nhiều CSS.
